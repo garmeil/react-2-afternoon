@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
-class EmployeeList extends Component {
+export default class EmployeeList extends Component {
   render() {
     return (
       <div>
         <ul className="listContainer">
           {this.props.employees.map(val => (
             <li
+              className="listText"
               key={val.id}
               onClick={() => {
                 this.props.selectEmployee(val);
               }}
-              className="listText"
             >
               {val.name}
             </li>
@@ -21,5 +21,3 @@ class EmployeeList extends Component {
     );
   }
 }
-
-export default EmployeeList;
